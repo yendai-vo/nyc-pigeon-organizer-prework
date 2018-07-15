@@ -9,4 +9,5 @@ def nyc_pigeon_organizer(data)
       organizedData[birdName][attributeType].push(attributeValue.to_s)
     end
   end
+  puts organizedData
 end
