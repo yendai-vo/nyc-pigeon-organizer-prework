@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
         organizedData[bird] = {} unless organizedData[bird]
         organizedData[bird][attributeType] = [] unless organizedData[bird][attributeType]
 
-        organizedData[bird][attributeType].push(attributeValue)
+        organizedData[bird][attributeType].push(attributeValue.to_s)
         # organizedData[bird][attributeType] = [attributeValue]
         # organizedData[bird] = {} unless organizedData[bird]
         # organizedData[bird][attributeType] = [] unless organizedData[bird][attributeType]
