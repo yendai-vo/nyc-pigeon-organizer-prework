@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
         organizedData[bird] = {
           attributeType => []
         }
-        organizedData[birdName][attributeType].push(attributeValue.to_s)
+        organizedData[bird][attributeType].push(attributeValue.to_s)
       end
     end
   end
