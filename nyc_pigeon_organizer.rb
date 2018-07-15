@@ -1,6 +1,6 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
-  organizedData = {}
+  organizedData = Hash.new
   data.each do |attributeType, propertyHash |
     propertyHash.each do |attributeValue, birdName|
       organizedData[birdName] = {
