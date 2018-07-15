@@ -5,14 +5,12 @@ def nyc_pigeon_organizer(data)
   data.each do |attributeType, attributeValues |
     attributeValues.each do |attributeValue, birdNames|
       birdNames.each do |bird|
-        organizedData[bird] = {} unless organizedData[bird]
-        organizedData[bird][attributeType] = [] unless organizedData[bird][attributeType]
-
-        organizedData[bird][attributeType].push(attributeValue.to_s)
-        # organizedData[bird][attributeType] = [attributeValue]
+        organizedData[bird] ||= {}
+        organizedData[bird][attributeType] ||= []
         # organizedData[bird] = {} unless organizedData[bird]
         # organizedData[bird][attributeType] = [] unless organizedData[bird][attributeType]
-        # organizedData[bird][attributeType].push(attributeValue.to_s)
+
+        organizedData[bird][attributeType].push(attributeValue.to_s)
       end
     end
   end
