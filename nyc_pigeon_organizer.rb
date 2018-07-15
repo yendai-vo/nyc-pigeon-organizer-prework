@@ -6,7 +6,7 @@ def nyc_pigeon_organizer(data)
     propertyHash.each do |attributeValue, birdNames|
       birdNames.each do |bird|
         # organizedData[bird] = {attributeType => []}
-        organizedData[bird] ||= Hash.new
+        organizedData[bird] = Hash.new
         organizedData[bird][attributeType].push(attributeValue.to_s)
       end
     end
